@@ -37,7 +37,7 @@ namespace Practico2
             this.LModificar = new System.Windows.Forms.Label();
             this.TNombre = new System.Windows.Forms.TextBox();
             this.TApellido = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TTelefono = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.RBVaron = new System.Windows.Forms.RadioButton();
@@ -127,12 +127,13 @@ namespace Practico2
             this.TApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TApellido_KeyPress);
             this.TApellido.Leave += new System.EventHandler(this.TApellido_Leave);
             // 
-            // textBox1
+            // TTelefono
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 222);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 22);
-            this.textBox1.TabIndex = 10;
+            this.TTelefono.Location = new System.Drawing.Point(122, 222);
+            this.TTelefono.Name = "TTelefono";
+            this.TTelefono.Size = new System.Drawing.Size(238, 22);
+            this.TTelefono.TabIndex = 10;
+            this.TTelefono.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -202,7 +203,7 @@ namespace Practico2
             this.panel1.Controls.Add(this.LNya);
             this.panel1.Controls.Add(this.TNombre);
             this.panel1.Controls.Add(this.TApellido);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TTelefono);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Location = new System.Drawing.Point(73, 67);
             this.panel1.Name = "panel1";
@@ -343,7 +344,7 @@ namespace Practico2
         private System.Windows.Forms.TextBox TApellido;
         private System.Windows.Forms.Button TGuardar;
         private System.Windows.Forms.Button TEliminar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TTelefono;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.RadioButton RBVaron;

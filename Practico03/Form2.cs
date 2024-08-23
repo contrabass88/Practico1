@@ -68,13 +68,8 @@ namespace Practico2
                 //string nombreCompleto = nombre + " " + apellido;
 
                 LModificar.Text = nombreCompleto;
-                limpiar();
+                
             }
-        }
-        private void limpiar()
-        {
-            TNombre.Clear();
-            TApellido.Clear();
         }
 
         private void TDni_TextChanged(object sender, EventArgs e)
@@ -87,6 +82,7 @@ namespace Practico2
 
         }
 
+        private const string V = " ";
         ErrorProvider errorP = new ErrorProvider();
         private object pictureBox1;
 
@@ -165,6 +161,8 @@ namespace Practico2
                 TDni.Clear();
                 TApellido.Clear();
                 TNombre.Clear();
+                TTelefono.Clear();
+             
 
                 // Mostrar un mensaje opcional confirmando que se ha eliminado el cliente
                 MessageBox.Show($"El Cliente: {nombreCompleto} se eliminó correctamente",
@@ -202,6 +200,11 @@ namespace Practico2
            
         pictureBox2.Image = Practico03.Properties.Resources.customer_person_people_woman_you_16271; // Cambia la imagen a la de Mujer
          
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
