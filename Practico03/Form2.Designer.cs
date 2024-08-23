@@ -39,10 +39,10 @@ namespace Practico2
             this.TApellido = new System.Windows.Forms.TextBox();
             this.TTelefono = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CBNaranja = new System.Windows.Forms.CheckBox();
             this.RBVaron = new System.Windows.Forms.RadioButton();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.CBVisa = new System.Windows.Forms.CheckBox();
+            this.CBMastercard = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.TDni = new System.Windows.Forms.TextBox();
@@ -144,16 +144,16 @@ namespace Practico2
             this.label1.TabIndex = 11;
             this.label1.Text = "Telefono";
             // 
-            // checkBox1
+            // CBNaranja
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(170, 302);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(84, 20);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Naranja";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.CBNaranja.AutoSize = true;
+            this.CBNaranja.Location = new System.Drawing.Point(170, 302);
+            this.CBNaranja.Name = "CBNaranja";
+            this.CBNaranja.Size = new System.Drawing.Size(84, 20);
+            this.CBNaranja.TabIndex = 12;
+            this.CBNaranja.Text = "Naranja";
+            this.CBNaranja.UseVisualStyleBackColor = true;
+            this.CBNaranja.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // RBVaron
             // 
@@ -168,25 +168,25 @@ namespace Practico2
             this.RBVaron.UseVisualStyleBackColor = true;
             this.RBVaron.CheckedChanged += new System.EventHandler(this.RBVaron_CheckedChanged);
             // 
-            // checkBox2
+            // CBVisa
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(170, 338);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(60, 20);
-            this.checkBox2.TabIndex = 14;
-            this.checkBox2.Text = "Visa";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CBVisa.AutoSize = true;
+            this.CBVisa.Location = new System.Drawing.Point(170, 338);
+            this.CBVisa.Name = "CBVisa";
+            this.CBVisa.Size = new System.Drawing.Size(60, 20);
+            this.CBVisa.TabIndex = 14;
+            this.CBVisa.Text = "Visa";
+            this.CBVisa.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // CBMastercard
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(170, 374);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(107, 20);
-            this.checkBox3.TabIndex = 15;
-            this.checkBox3.Text = "Mastercard";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.CBMastercard.AutoSize = true;
+            this.CBMastercard.Location = new System.Drawing.Point(170, 374);
+            this.CBMastercard.Name = "CBMastercard";
+            this.CBMastercard.Size = new System.Drawing.Size(107, 20);
+            this.CBMastercard.TabIndex = 15;
+            this.CBMastercard.Text = "Mastercard";
+            this.CBMastercard.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -195,16 +195,16 @@ namespace Practico2
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.LApellido);
             this.panel1.Controls.Add(this.LNombre);
-            this.panel1.Controls.Add(this.checkBox3);
+            this.panel1.Controls.Add(this.CBMastercard);
             this.panel1.Controls.Add(this.LDni);
-            this.panel1.Controls.Add(this.checkBox2);
+            this.panel1.Controls.Add(this.CBVisa);
             this.panel1.Controls.Add(this.LModificar);
             this.panel1.Controls.Add(this.TDni);
             this.panel1.Controls.Add(this.LNya);
             this.panel1.Controls.Add(this.TNombre);
             this.panel1.Controls.Add(this.TApellido);
             this.panel1.Controls.Add(this.TTelefono);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.CBNaranja);
             this.panel1.Location = new System.Drawing.Point(73, 67);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(379, 424);
@@ -255,7 +255,7 @@ namespace Practico2
             // 
             this.button1.Image = global::Practico03.Properties.Resources.log_logout_door_1563;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(518, 513);
+            this.button1.Location = new System.Drawing.Point(498, 513);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 73);
             this.button1.TabIndex = 18;
@@ -296,9 +296,9 @@ namespace Practico2
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Practico03.Properties.Resources.customer_person_people_man_you_1625__1_1;
-            this.pictureBox2.Location = new System.Drawing.Point(496, 87);
+            this.pictureBox2.Location = new System.Drawing.Point(498, 82);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(163, 144);
+            this.pictureBox2.Size = new System.Drawing.Size(114, 129);
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
@@ -306,7 +306,7 @@ namespace Practico2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 652);
+            this.ClientSize = new System.Drawing.Size(662, 638);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.RBMujer);
             this.Controls.Add(this.label2);
@@ -346,10 +346,10 @@ namespace Practico2
         private System.Windows.Forms.Button TEliminar;
         private System.Windows.Forms.TextBox TTelefono;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox CBNaranja;
         private System.Windows.Forms.RadioButton RBVaron;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox CBVisa;
+        private System.Windows.Forms.CheckBox CBMastercard;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;

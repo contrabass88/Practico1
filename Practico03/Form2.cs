@@ -162,7 +162,11 @@ namespace Practico2
                 TApellido.Clear();
                 TNombre.Clear();
                 TTelefono.Clear();
-             
+                LModificar.Text = "";
+
+                CBNaranja.Checked = false;
+                CBVisa.Checked = false;
+                CBMastercard.Checked = false;   
 
                 // Mostrar un mensaje opcional confirmando que se ha eliminado el cliente
                 MessageBox.Show($"El Cliente: {nombreCompleto} se eliminó correctamente",
