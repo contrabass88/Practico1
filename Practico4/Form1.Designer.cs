@@ -30,9 +30,9 @@
         {
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
-            this.txtDesde = new System.Windows.Forms.TextBox();
-            this.txtHasta = new System.Windows.Forms.TextBox();
-            this.btnGenerar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.lblListaDeNumeros = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -55,29 +55,33 @@
             this.lblHasta.TabIndex = 1;
             this.lblHasta.Text = "Hasta";
             // 
-            // txtDesde
+            // textBox1
             // 
-            this.txtDesde.Location = new System.Drawing.Point(101, 69);
-            this.txtDesde.Name = "txtDesde";
-            this.txtDesde.Size = new System.Drawing.Size(100, 22);
-            this.txtDesde.TabIndex = 2;
-            this.txtDesde.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Location = new System.Drawing.Point(101, 69);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_keyPress);
             // 
-            // txtHasta
+            // textBox2
             // 
-            this.txtHasta.Location = new System.Drawing.Point(101, 132);
-            this.txtHasta.Name = "txtHasta";
-            this.txtHasta.Size = new System.Drawing.Size(100, 22);
-            this.txtHasta.TabIndex = 3;
+            this.textBox2.Location = new System.Drawing.Point(101, 132);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // btnGenerar
+            // button1
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(267, 69);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(162, 37);
-            this.btnGenerar.TabIndex = 4;
-            this.btnGenerar.Text = "Generar Función";
-            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(267, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Generar Función";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // listBox1
             // 
@@ -105,9 +109,9 @@
             this.ClientSize = new System.Drawing.Size(1055, 450);
             this.Controls.Add(this.lblListaDeNumeros);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.btnGenerar);
-            this.Controls.Add(this.txtHasta);
-            this.Controls.Add(this.txtDesde);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblHasta);
             this.Controls.Add(this.lblDesde);
             this.Name = "Form1";
@@ -122,9 +126,9 @@
 
         private System.Windows.Forms.Label lblDesde;
         private System.Windows.Forms.Label lblHasta;
-        private System.Windows.Forms.TextBox txtDesde;
-        private System.Windows.Forms.TextBox txtHasta;
-        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label lblListaDeNumeros;
     }
