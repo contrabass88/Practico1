@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -37,13 +40,15 @@
             this.lblListaDeNumeros = new System.Windows.Forms.Label();
             this.bNumerosPares = new System.Windows.Forms.Button();
             this.bNumerosImpares = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BNumerosPrimos = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Location = new System.Drawing.Point(243, 69);
+            this.lblDesde.Location = new System.Drawing.Point(12, 75);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(48, 16);
             this.lblDesde.TabIndex = 0;
@@ -52,7 +57,7 @@
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(243, 132);
+            this.lblHasta.Location = new System.Drawing.Point(12, 138);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(43, 16);
             this.lblHasta.TabIndex = 1;
@@ -60,7 +65,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(297, 69);
+            this.textBox1.Location = new System.Drawing.Point(88, 75);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(128, 22);
             this.textBox1.TabIndex = 2;
@@ -69,7 +74,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(297, 132);
+            this.textBox2.Location = new System.Drawing.Point(88, 138);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(128, 22);
             this.textBox2.TabIndex = 3;
@@ -78,7 +83,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(226, 186);
+            this.button1.Location = new System.Drawing.Point(15, 194);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(162, 45);
             this.button1.TabIndex = 4;
@@ -90,9 +95,9 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(440, 69);
+            this.listBox1.Location = new System.Drawing.Point(241, 75);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(471, 324);
+            this.listBox1.Size = new System.Drawing.Size(280, 324);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -109,7 +114,7 @@
             // 
             // bNumerosPares
             // 
-            this.bNumerosPares.Location = new System.Drawing.Point(226, 237);
+            this.bNumerosPares.Location = new System.Drawing.Point(15, 254);
             this.bNumerosPares.Name = "bNumerosPares";
             this.bNumerosPares.Size = new System.Drawing.Size(162, 47);
             this.bNumerosPares.TabIndex = 7;
@@ -119,7 +124,7 @@
             // 
             // bNumerosImpares
             // 
-            this.bNumerosImpares.Location = new System.Drawing.Point(226, 290);
+            this.bNumerosImpares.Location = new System.Drawing.Point(15, 307);
             this.bNumerosImpares.Name = "bNumerosImpares";
             this.bNumerosImpares.Size = new System.Drawing.Size(162, 47);
             this.bNumerosImpares.TabIndex = 8;
@@ -127,21 +132,40 @@
             this.bNumerosImpares.UseVisualStyleBackColor = true;
             this.bNumerosImpares.Click += new System.EventHandler(this.bNimpares_Click);
             // 
-            // button4
+            // BNumerosPrimos
             // 
-            this.button4.Location = new System.Drawing.Point(226, 343);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 47);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Números Primos";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BNumerosPrimos.Location = new System.Drawing.Point(12, 360);
+            this.BNumerosPrimos.Name = "BNumerosPrimos";
+            this.BNumerosPrimos.Size = new System.Drawing.Size(162, 47);
+            this.BNumerosPrimos.TabIndex = 9;
+            this.BNumerosPrimos.Text = "Números Primos";
+            this.BNumerosPrimos.UseVisualStyleBackColor = true;
+            this.BNumerosPrimos.Click += new System.EventHandler(this.bNumerosPares_Click);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(540, 75);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(330, 324);
+            this.chart1.TabIndex = 10;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 450);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.BNumerosPrimos);
             this.Controls.Add(this.bNumerosImpares);
             this.Controls.Add(this.bNumerosPares);
             this.Controls.Add(this.lblListaDeNumeros);
@@ -154,6 +178,7 @@
             this.Name = "Form1";
             this.Text = "Formulario 4";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +195,8 @@
         private System.Windows.Forms.Label lblListaDeNumeros;
         private System.Windows.Forms.Button bNumerosPares;
         private System.Windows.Forms.Button bNumerosImpares;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BNumerosPrimos;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

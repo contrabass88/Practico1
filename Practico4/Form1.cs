@@ -143,6 +143,51 @@ namespace Practico4
                 }
             }
         }
+
+        private void bNumerosPares_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            if ((textBox2.Text == "") || (textBox1.Text == ""))
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                int valor1;
+                int valor2;
+
+                // Convertimos los valores de los TextBox a enteros
+                valor1 = Convert.ToInt32(textBox1.Text);
+                valor2 = Convert.ToInt32(textBox2.Text);
+
+                // Recorremos los números en el rango
+                for (int i = valor1; i <= valor2; i++)
+                {
+                    // Verificamos si el número es primo
+                    if (EsPrimo(i))
+                    {
+                        listBox1.Items.Add(i);
+                    }
+                }
+            }
+        }
+
+        // Función que determina si un número es primo
+        private bool EsPrimo(int numero)
+        {
+            if (numero <= 1)
+                return false;
+
+            for (int i = 2; i <= Math.Sqrt(numero); i++)
+            {
+                if (numero % i == 0)
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    
 }
