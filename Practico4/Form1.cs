@@ -59,6 +59,7 @@ namespace Practico4
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             if ((textBox2.Text == "") || (textBox1.Text == ""))
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -85,6 +86,62 @@ namespace Practico4
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bNPares_Click(object sender, EventArgs e)
+
+        {
+            listBox1.Items.Clear();
+            if ((textBox2.Text == "") || (textBox1.Text == ""))
+                    MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                else
+                {
+                    int valor1;
+                    int valor2;
+                    valor1 = Convert.ToInt32(textBox1.Text);
+                    valor2 = Convert.ToInt32(textBox2.Text);
+
+
+                    for (int i = valor1; i <= valor2; i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            listBox1.Items.Add(i);
+                        }
+                    }
+
+                    //listBox1.Items.Add(valor2);
+                }
+            }
+
+        private void bNimpares_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+
+            {
+                if ((textBox2.Text == "") || (textBox1.Text == ""))
+                    MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                else
+                {
+                    int valor1;
+                    int valor2;
+                    valor1 = Convert.ToInt32(textBox1.Text);
+                    valor2 = Convert.ToInt32(textBox2.Text);
+
+
+                    for (int i = valor1; i <= valor2; i++)
+                    {
+                        if (!(i % 2 == 0))
+                        {
+                            listBox1.Items.Add(i);
+                        }
+                    }
+
+                    //listBox1.Items.Add(valor2);
+                }
+            }
         }
     }
     
