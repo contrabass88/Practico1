@@ -31,10 +31,9 @@ namespace Practico4
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo numneros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
-                return
-;
+                return;
             }
         }
 
@@ -42,10 +41,9 @@ namespace Practico4
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo numneros", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo números", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
-                return
-;
+                return;
             }
         }
 
@@ -82,6 +80,11 @@ namespace Practico4
 
                 //listBox1.Items.Add(valor2);
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     
