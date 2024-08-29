@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Practico4
 {
@@ -60,28 +61,27 @@ namespace Practico4
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
-            if ((textBox2.Text == "") || (textBox1.Text == ""))
-                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            if ((textBox2.Text == "") || (textBox1.Text == ""))
+            {
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
-                int valor1;
-                int valor2;
-                valor1 = Convert.ToInt32(textBox1.Text);
-                valor2 = Convert.ToInt32(textBox2.Text);
+                int valor1 = Convert.ToInt32(textBox1.Text);
+                int valor2 = Convert.ToInt32(textBox2.Text);
 
-
+                
                 for (int i = valor1; i <= valor2; i++)
                 {
-                    if (i % 1 == 0)
-                    {
-                        listBox1.Items.Add(i);
-                    }
+                    listBox1.Items.Add(i);
                 }
 
-                //listBox1.Items.Add(valor2);
-            }
+                
+                UpdateChart("GenerarFuncion");
+            }
         }
+
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -89,62 +89,64 @@ namespace Practico4
         }
 
         private void bNPares_Click(object sender, EventArgs e)
-
         {
             listBox1.Items.Clear();
+
             if ((textBox2.Text == "") || (textBox1.Text == ""))
-                    MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                else
-                {
-                    int valor1;
-                    int valor2;
-                    valor1 = Convert.ToInt32(textBox1.Text);
-                    valor2 = Convert.ToInt32(textBox2.Text);
-
-
-                    for (int i = valor1; i <= valor2; i++)
-                    {
-                        if (i % 2 == 0)
-                        {
-                            listBox1.Items.Add(i);
-                        }
-                    }
-
-                    //listBox1.Items.Add(valor2);
-                }
+            {
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else
+            {
+                int valor1;
+                int valor2;
+                valor1 = Convert.ToInt32(textBox1.Text);
+                valor2 = Convert.ToInt32(textBox2.Text);
+
+                for (int i = valor1; i <= valor2; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        listBox1.Items.Add(i);
+                    }
+                }
+
+                // Llamada al método UpdateChart después de haber generado los números
+                UpdateChart("Pares");
+            }
+        }
+
 
         private void bNimpares_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
 
+            if ((textBox2.Text == "") || (textBox1.Text == ""))
             {
-                if ((textBox2.Text == "") || (textBox1.Text == ""))
-                    MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int valor1;
+                int valor2;
+                valor1 = Convert.ToInt32(textBox1.Text);
+                valor2 = Convert.ToInt32(textBox2.Text);
 
-                else
+                for (int i = valor1; i <= valor2; i++)
                 {
-                    int valor1;
-                    int valor2;
-                    valor1 = Convert.ToInt32(textBox1.Text);
-                    valor2 = Convert.ToInt32(textBox2.Text);
-
-
-                    for (int i = valor1; i <= valor2; i++)
+                    if (i % 2 != 0)
                     {
-                        if (!(i % 2 == 0))
-                        {
-                            listBox1.Items.Add(i);
-                        }
+                        listBox1.Items.Add(i);
                     }
-
-                    //listBox1.Items.Add(valor2);
                 }
+
+                // Llamada al método UpdateChart después de haber generado los números impares
+                UpdateChart("Impares");
             }
         }
 
-        private void bNumerosPares_Click(object sender, EventArgs e)
+
+        private void BNumerosPrimos_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
             if ((textBox2.Text == "") || (textBox1.Text == ""))
@@ -167,27 +169,61 @@ namespace Practico4
                         listBox1.Items.Add(i);
                     }
                 }
+
+                // Llamamos a UpdateChart para graficar los números primos
+                UpdateChart("Primos");
             }
         }
 
-        // Función que determina si un número es primo
+        // Método para verificar si un número es primo
         private bool EsPrimo(int numero)
         {
-            if (numero <= 1)
-                return false;
-
+            if (numero <= 1) return false;
             for (int i = 2; i <= Math.Sqrt(numero); i++)
             {
-                if (numero % i == 0)
-                    return false;
+                if (numero % i == 0) return false;
             }
-
             return true;
         }
+
 
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UpdateChart(string tipo)
+        {
+            chart1.Series.Clear(); // Limpiar las series anteriores
+            Series serie = new Series("Números");
+
+            // Cambiar el tipo de gráfico según el tipo de números seleccionado
+            switch (tipo)
+            {
+                case "GenerarFuncion":
+                    serie.ChartType = SeriesChartType.Area; // Gráfico de área como ejemplo para "Generar Función"
+                    break;
+                case "Pares":
+                    serie.ChartType = SeriesChartType.Column; // Gráfico de columnas para números pares
+                    break;
+                case "Impares":
+                    serie.ChartType = SeriesChartType.Column; // Gráfico de líneas para números impares
+                    break;
+                case "Primos":
+                    serie.ChartType = SeriesChartType.Pie; // Gráfico de torta para números primos
+                    break;
+                default:
+                    serie.ChartType = SeriesChartType.Column; // Gráfico por defecto
+                    break;
+            }
+
+            // Agregar los valores al gráfico
+            foreach (var item in listBox1.Items)
+            {
+                serie.Points.AddXY(item, Convert.ToInt32(item));
+            }
+
+            chart1.Series.Add(serie);
         }
     }
 }
