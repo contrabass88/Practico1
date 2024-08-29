@@ -140,7 +140,7 @@
             this.BNumerosPrimos.TabIndex = 9;
             this.BNumerosPrimos.Text = "Números Primos";
             this.BNumerosPrimos.UseVisualStyleBackColor = true;
-            this.BNumerosPrimos.Click += new System.EventHandler(this.bNPares_Click);
+            this.BNumerosPrimos.Click += new System.EventHandler(this.BNumerosPrimos_Click);
             // 
             // chart1
             // 
@@ -150,22 +150,21 @@
             this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(540, 75);
             this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(330, 324);
+            this.chart1.Size = new System.Drawing.Size(484, 324);
             this.chart1.TabIndex = 10;
-            this.chart1.Text = "chart1";
+            this.chart1.Text = "Grafico";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 450);
+            this.ClientSize = new System.Drawing.Size(1080, 450);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.BNumerosPrimos);
             this.Controls.Add(this.bNumerosImpares);
