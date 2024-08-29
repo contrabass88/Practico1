@@ -140,7 +140,7 @@
             this.BNumerosPrimos.TabIndex = 9;
             this.BNumerosPrimos.Text = "Números Primos";
             this.BNumerosPrimos.UseVisualStyleBackColor = true;
-            this.BNumerosPrimos.Click += new System.EventHandler(this.bNumerosPares_Click);
+            this.BNumerosPrimos.Click += new System.EventHandler(this.bNPares_Click);
             // 
             // chart1
             // 

@@ -207,7 +207,7 @@ namespace Practico4
                     serie.ChartType = SeriesChartType.Column; // Gráfico de columnas para números pares
                     break;
                 case "Impares":
-                    serie.ChartType = SeriesChartType.Column; // Gráfico de líneas para números impares
+                    serie.ChartType = SeriesChartType.Line; // Gráfico de líneas para números impares
                     break;
                 case "Primos":
                     serie.ChartType = SeriesChartType.Pie; // Gráfico de torta para números primos
