@@ -92,5 +92,13 @@
   <ItemGroup>
     <None Include="Resources\avatar.png.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoFinal.png" />
+    <None Include="Resources\Save_37110 %282%29.ico" />
+    <None Include="Resources\Save_37110 %283%29.ico" />
+    <None Include="Resources\Save_37110 %284%29.ico" />
+    <Content Include="Resources\user_84308 %281%29.ico" />
+    <Content Include="Resources\user_84308.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
