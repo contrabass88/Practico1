@@ -32,25 +32,31 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.Hombre = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Foto = new System.Windows.Forms.Button();
+            this.RBHombre = new System.Windows.Forms.RadioButton();
+            this.RBMujer = new System.Windows.Forms.RadioButton();
+            this.DTFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.BtnFoto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TBNombre = new System.Windows.Forms.TextBox();
+            this.TBApellido = new System.Windows.Forms.TextBox();
+            this.TSaldo = new System.Windows.Forms.TextBox();
             this.lblSaldo = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.sex = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TBFoto = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.PBFoto = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ELiminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Foto1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -102,51 +108,50 @@
             this.lblSexo.TabIndex = 4;
             this.lblSexo.Text = "Sexo:";
             // 
-            // Hombre
+            // RBHombre
             // 
-            this.Hombre.AutoSize = true;
-            this.Hombre.BackColor = System.Drawing.Color.Transparent;
-            this.Hombre.Checked = true;
-            this.Hombre.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hombre.ForeColor = System.Drawing.Color.White;
-            this.Hombre.Location = new System.Drawing.Point(200, 178);
-            this.Hombre.Name = "Hombre";
-            this.Hombre.Size = new System.Drawing.Size(106, 35);
-            this.Hombre.TabIndex = 5;
-            this.Hombre.TabStop = true;
-            this.Hombre.Text = "Hombre";
-            this.Hombre.UseVisualStyleBackColor = false;
+            this.RBHombre.AutoSize = true;
+            this.RBHombre.BackColor = System.Drawing.Color.Transparent;
+            this.RBHombre.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBHombre.ForeColor = System.Drawing.Color.White;
+            this.RBHombre.Location = new System.Drawing.Point(200, 178);
+            this.RBHombre.Name = "RBHombre";
+            this.RBHombre.Size = new System.Drawing.Size(106, 35);
+            this.RBHombre.TabIndex = 5;
+            this.RBHombre.Text = "Hombre";
+            this.RBHombre.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // RBMujer
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(355, 178);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(88, 35);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.Text = "Mujer";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.RBMujer.AutoSize = true;
+            this.RBMujer.BackColor = System.Drawing.Color.Transparent;
+            this.RBMujer.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBMujer.ForeColor = System.Drawing.Color.White;
+            this.RBMujer.Location = new System.Drawing.Point(355, 178);
+            this.RBMujer.Name = "RBMujer";
+            this.RBMujer.Size = new System.Drawing.Size(88, 35);
+            this.RBMujer.TabIndex = 6;
+            this.RBMujer.Text = "Mujer";
+            this.RBMujer.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // DTFechaNac
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.dateTimePicker1.Location = new System.Drawing.Point(324, 131);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(120, 22);
-            this.dateTimePicker1.TabIndex = 10;
+            this.DTFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTFechaNac.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.DTFechaNac.Location = new System.Drawing.Point(324, 131);
+            this.DTFechaNac.Name = "DTFechaNac";
+            this.DTFechaNac.Size = new System.Drawing.Size(120, 22);
+            this.DTFechaNac.TabIndex = 10;
             // 
-            // Foto
+            // BtnFoto
             // 
-            this.Foto.Location = new System.Drawing.Point(60, 270);
-            this.Foto.Name = "Foto";
-            this.Foto.Size = new System.Drawing.Size(116, 45);
-            this.Foto.TabIndex = 8;
-            this.Foto.Text = "Foto";
-            this.Foto.UseVisualStyleBackColor = true;
+            this.BtnFoto.Location = new System.Drawing.Point(60, 270);
+            this.BtnFoto.Name = "BtnFoto";
+            this.BtnFoto.Size = new System.Drawing.Size(116, 45);
+            this.BtnFoto.TabIndex = 8;
+            this.BtnFoto.Text = "Foto";
+            this.BtnFoto.UseVisualStyleBackColor = true;
+            this.BtnFoto.Click += new System.EventHandler(this.BtnFoto_Click);
             // 
             // button2
             // 
@@ -161,27 +166,34 @@
             this.button2.Text = "Agregar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.BAgregar_Click);
             // 
-            // textBox1
+            // TBNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(196, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 22);
-            this.textBox1.TabIndex = 10;
+            this.TBNombre.Location = new System.Drawing.Point(196, 29);
+            this.TBNombre.Name = "TBNombre";
+            this.TBNombre.Size = new System.Drawing.Size(301, 22);
+            this.TBNombre.TabIndex = 10;
+            this.TBNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.TBNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBNombre_KeyPress);
+            this.TBNombre.MouseLeave += new System.EventHandler(this.TBNombre_MouseLeave);
             // 
-            // textBox2
+            // TBApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(196, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(301, 22);
-            this.textBox2.TabIndex = 11;
+            this.TBApellido.Location = new System.Drawing.Point(196, 80);
+            this.TBApellido.Name = "TBApellido";
+            this.TBApellido.Size = new System.Drawing.Size(301, 22);
+            this.TBApellido.TabIndex = 11;
+            this.TBApellido.TextChanged += new System.EventHandler(this.textBoxApellido_TextChanged);
+            this.TBApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TBApellido_KeyPress);
             // 
-            // textBox3
+            // TSaldo
             // 
-            this.textBox3.Location = new System.Drawing.Point(200, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(297, 22);
-            this.textBox3.TabIndex = 12;
+            this.TSaldo.Location = new System.Drawing.Point(200, 230);
+            this.TSaldo.Name = "TSaldo";
+            this.TSaldo.Size = new System.Drawing.Size(297, 22);
+            this.TSaldo.TabIndex = 12;
+            this.TSaldo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TSaldo_KeyPress);
             // 
             // lblSaldo
             // 
@@ -195,62 +207,27 @@
             this.lblSaldo.TabIndex = 13;
             this.lblSaldo.Text = "Saldo:";
             // 
-            // dataGridView1
+            // TBFoto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Column1,
-            this.sex});
-            this.dataGridView1.Location = new System.Drawing.Point(51, 431);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(961, 210);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Apellido";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // sex
-            // 
-            this.sex.HeaderText = "Sexo";
-            this.sex.MinimumWidth = 6;
-            this.sex.Name = "sex";
-            this.sex.Width = 125;
-            // 
-            // textBox4
-            // 
-            this.textBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.textBox4.Location = new System.Drawing.Point(200, 281);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(297, 22);
-            this.textBox4.TabIndex = 15;
+            this.TBFoto.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.TBFoto.Location = new System.Drawing.Point(200, 281);
+            this.TBFoto.Name = "TBFoto";
+            this.TBFoto.Size = new System.Drawing.Size(297, 22);
+            this.TBFoto.TabIndex = 15;
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Practico5.Properties.Resources.fon2;
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.TBFoto);
             this.panel1.Controls.Add(this.lblSaldo);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TSaldo);
+            this.panel1.Controls.Add(this.TBApellido);
+            this.panel1.Controls.Add(this.TBNombre);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.Foto);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.Hombre);
+            this.panel1.Controls.Add(this.BtnFoto);
+            this.panel1.Controls.Add(this.DTFechaNac);
+            this.panel1.Controls.Add(this.RBMujer);
+            this.panel1.Controls.Add(this.RBHombre);
             this.panel1.Controls.Add(this.lblSexo);
             this.panel1.Controls.Add(this.lblFechaNac);
             this.panel1.Controls.Add(this.lblApellido);
@@ -260,31 +237,113 @@
             this.panel1.Size = new System.Drawing.Size(602, 384);
             this.panel1.TabIndex = 16;
             // 
-            // pictureBox1
+            // PBFoto
             // 
-            this.pictureBox1.Image = global::Practico5.Properties.Resources.avatar_png;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(686, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 281);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.PBFoto.Image = global::Practico5.Properties.Resources.avatar_png;
+            this.PBFoto.ImageLocation = "";
+            this.PBFoto.Location = new System.Drawing.Point(686, 37);
+            this.PBFoto.Name = "PBFoto";
+            this.PBFoto.Size = new System.Drawing.Size(294, 281);
+            this.PBFoto.TabIndex = 17;
+            this.PBFoto.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Apellido,
+            this.Fecha,
+            this.Columna4,
+            this.Saldo,
+            this.ELiminar,
+            this.Foto1,
+            this.Ruta});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 423);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1051, 150);
+            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.MinimumWidth = 6;
+            this.Apellido.Name = "Apellido";
+            this.Apellido.Width = 125;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha de Nacimiento";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.Width = 125;
+            // 
+            // Columna4
+            // 
+            this.Columna4.HeaderText = "Sexo";
+            this.Columna4.MinimumWidth = 6;
+            this.Columna4.Name = "Columna4";
+            this.Columna4.Width = 125;
+            // 
+            // Saldo
+            // 
+            this.Saldo.HeaderText = "Saldo";
+            this.Saldo.MinimumWidth = 6;
+            this.Saldo.Name = "Saldo";
+            this.Saldo.Width = 125;
+            // 
+            // ELiminar
+            // 
+            this.ELiminar.HeaderText = "Eliminar";
+            this.ELiminar.MinimumWidth = 6;
+            this.ELiminar.Name = "ELiminar";
+            this.ELiminar.Width = 125;
+            // 
+            // Foto1
+            // 
+            this.Foto1.HeaderText = "Foto";
+            this.Foto1.MinimumWidth = 6;
+            this.Foto1.Name = "Foto1";
+            this.Foto1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Foto1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Foto1.Width = 125;
+            // 
+            // Ruta
+            // 
+            this.Ruta.HeaderText = "Ruta";
+            this.Ruta.MinimumWidth = 6;
+            this.Ruta.Name = "Ruta";
+            this.Ruta.Width = 125;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Practico5.Properties.Resources.fondoFinal;
-            this.ClientSize = new System.Drawing.Size(1032, 653);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1142, 653);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PBFoto);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -294,22 +353,28 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblFechaNac;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.RadioButton Hombre;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button Foto;
+        private System.Windows.Forms.RadioButton RBHombre;
+        private System.Windows.Forms.RadioButton RBMujer;
+        private System.Windows.Forms.DateTimePicker DTFechaNac;
+        private System.Windows.Forms.Button BtnFoto;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TBNombre;
+        private System.Windows.Forms.TextBox TBApellido;
+        private System.Windows.Forms.TextBox TSaldo;
         private System.Windows.Forms.Label lblSaldo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TBFoto;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PBFoto;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Saldo;
+        private System.Windows.Forms.DataGridViewButtonColumn ELiminar;
+        private System.Windows.Forms.DataGridViewImageColumn Foto1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
     }
 }
 
